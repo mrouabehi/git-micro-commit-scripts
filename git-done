@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -eo pipefail
+
+git reset --soft "$(git history)"
+git add -A
+git commit --amend
+
+echo "Change committed. Run 'git push' to share with others."
